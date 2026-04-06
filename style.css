@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: url("https://images.unsplash.com/photo-1523240795612-9a054b0db644") no-repeat center center/cover;
+    color: white;
+    text-align: center;
+}
+
+.home {
+    margin-top: 150px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.tagline {
+    font-size: 20px;
+    margin: 20px;
+}
+
+.buttons a {
+    display: inline-block;
+    margin: 20px;
+    padding: 15px 30px;
+    background: #ff7eb3;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}

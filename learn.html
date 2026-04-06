@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>📚 Subjects</h2>
+
+<div>
+    <button onclick="loadFiles()">📘 CSE</button>
+    <button onclick="loadFiles()">📘 EDC</button>
+    <button onclick="loadFiles()">📘 Physics</button>
+</div>
+
+<div id="files"></div>
+
+<script>
+function loadFiles() {
+    fetch("/files")
+    .then(res => res.json())
+    .then(data => {
+        let output = "";
+        data.forEach(file => {
+            output += `<p><a href="/uploads/${file}" target="_blank">${file}</a></p>`;
+        });
+        document.getElementById("files").innerHTML = output;
+    });
+}
+</script>
+
+</body>
+</html>
